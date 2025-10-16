@@ -106,11 +106,11 @@ public abstract class AbstractPet implements Pet, Comparable<Pet> {
      */
     @Override
     public int compareTo(Pet other) {
+      if (other == null) throw new NullPointerException("other");
       // BUG #2
       // Issue: Always returns 0; violates Comparable contract and prevents proper sorting.
       // Approach: Compare by weight using Double.compare to avoid precision pitfalls.
       // Solution:
-      if (other == null) throw new NullPointerException("other");
       return Double.compare(this.weight, other.getWeight());
       // return 0;
     }

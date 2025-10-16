@@ -1,7 +1,6 @@
 /**
  * Concrete pet representing a fish.
  * Extends {@link AbstractPet} and models aquarium-related considerations
- * (e.g., tank context and simple care needs).
  *
  * @see AbstractPet
  */

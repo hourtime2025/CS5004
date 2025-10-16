@@ -2,7 +2,6 @@
  * /**
  *  * Concrete pet representing a bird.
  *  * Extends {@link AbstractPet} and captures bird-specific characteristics
- *  * (e.g., species traits and vocalization).
  *  *
  *  * @see AbstractPet
  *  */

@@ -1,7 +1,6 @@
 /**
  * Concrete pet representing a dog.
  * Extends {@link AbstractPet} and provides dog-specific details/behavior
- * (e.g., typical exercise needs and sound).
  *
  * @see AbstractPet
  */

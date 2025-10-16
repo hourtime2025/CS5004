@@ -1,7 +1,6 @@
 /**
  * Concrete pet representing a cat.
  * Extends {@link AbstractPet} and provides cat-specific details/behavior
- * (e.g., activity level and meow/feeding nuances).
  *
  * @see AbstractPet
  */
