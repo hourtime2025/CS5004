@@ -1,0 +1,7 @@
+SplitSmart — Simple Group Expense Splitter
+
+- Stop arguing about who owes what—log expenses and get a clear, minimal set of paybacks.
+- Works for small groups (2–6 people) with simple split modes (equal now; others later if time).
+- Produces a per-person balance and an optimized “who pays whom” list.
+- Built in Java with clean OOD (MVC + Strategy), in‑memory data, and thorough unit tests.
+- Very small MVP scope per instructor guidance—no DB, no networking.
