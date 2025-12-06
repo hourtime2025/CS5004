@@ -1,0 +1,58 @@
+CS5005 / OOD — Recitation Submission
+Date: 2025-10-28
+
+Project Working Title: SplitSmart — Simple Group Expense Splitter
+
+Teammate(s):
+- Jane Huang
+- Partner: TBD (aiming for a 2‑person team; seeking someone interested in small finance/tools apps)
+Note: If teaming becomes firm, both teammates will submit the same elevator pitch.
+
+Elevator Pitch (bullets):
+- Stop arguing about who owes what—log expenses and get a clear, minimal set of paybacks.
+- Works for small groups (2–6 people) with simple split modes (equal now; others later if time).
+- Produces a per-person balance and an optimized “who pays whom” list.
+- Built in Java with clean OOD (MVC + Strategy), in‑memory data, and thorough unit tests.
+- Very small MVP scope per instructor guidance—no DB, no networking.
+
+Very Rough Draft: Domain Objects / Class Sketch
+Objects (tentative — details will change, that's normal):
+- User: id, name
+- Group: id, name, members: Set<User>, expenses: List<Expense>
+- Money (value object): amount (BigDecimal), currency (String)
+- Expense: id, payer: User, amount: Money, description, date, participants: Set<User>, splitStrategy: SplitStrategy
+- SplitStrategy (interface)
+  - EqualSplitStrategy
+  - (Stretch) WeightedSplitStrategy, PercentageSplitStrategy
+- Share: user, amountOwed (computed per expense)
+- BalanceSheet: Map<User, Money> (per-group aggregation of shares)
+- Settlement: from: User, to: User, amount: Money
+- SettlementOptimizer: computes minimal transfer set from BalanceSheet
+- Report: summary text of balances and settlements
+- ReportExporter (interface): export(Report) → String / file
+  - PlainTextReportExporter
+  - (Stretch) CsvReportExporter
+- Controllers (CLI): GroupController, ExpenseController
+- ConsoleView (very simple I/O)
+- Repositories (in-memory): GroupRepository, ExpenseRepository
+
+Text UML (very rough):
+Expense --uses--> SplitStrategy <|.. EqualSplitStrategy
+Group *--* User
+Group 1..* Expense
+SettlementOptimizer --produces--> Settlement
+ReportExporter <|.. PlainTextReportExporter, CsvReportExporter
+
+Planned MVP (keep it tiny):
+1) Create group, add users
+2) Add expenses using EqualSplitStrategy
+3) Compute balances and list minimal settlements
+4) Export plain-text summary
+
+Stretch (only if time allows):
+- Weighted/percentage splits
+- CSV export
+- Simple Swing/JavaFX view
+
+GitHub:
+- Will push this folder as FinalProject/ and submit the repo/folder URL on Canvas.
