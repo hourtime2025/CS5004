@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f059f16-003b-44d3-92ac-f35c58e88243" name="Changes" comment="" />
+    <list default="true" id="2f059f16-003b-44d3-92ac-f35c58e88243" name="Changes" comment="HW4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +111,19 @@
       <updated>1764998368627</updated>
       <workItem from="1764998370465" duration="9000" />
     </task>
+    <task id="LOCAL-00001" summary="HW4">
+      <option name="closed" value="true" />
+      <created>1764999792105</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764999792105</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="HW4" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW4" />
   </component>
 </project>
